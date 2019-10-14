@@ -9,6 +9,13 @@ publishDir = "docs"
 disqusShortname = "taraskaduk"
 #googleAnalytics = "UA-1XXXXXXX1-1"
 
+# netlify.toml
+[context.deploy-preview]
+command = "hugo -b $DEPLOY_PRIME_URL --buildFuture"
+
+[context.branch-deploy]
+command = "hugo -b $DEPLOY_PRIME_URL --buildFuture"
+
 [permalinks]
    posts = "/:year/:month/:day/:slug/"
 
